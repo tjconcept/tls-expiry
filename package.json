@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "duration": "^0.2.2",
+        "minimist": "^1.2.7"
+    }
+}
