@@ -1,6 +1,4 @@
 console.error(`Looking up "${hostname}"…`)
-
-const tcpConnection = await Deno.connect({port: 443, hostname})
-const tlsConnection = await Deno.startTls(tcpConnection, {hostname})
-const handshake = await tlsConnection.handshake()
-tlsConnection.close()
+const connection = await Deno.connectTls({port: 443, hostname})
+const handshake = await connection.handshake()
+connection.close()
